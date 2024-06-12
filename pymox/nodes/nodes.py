@@ -1,9 +1,9 @@
 from .lxc import Lxc
+from .storage import Storage
 
 
 class Nodes:
     def __init__(self, session):
-        self.url = '/api2/json/nodes'
         self.session = session
         self.api_urls = {
             'nodes': '/api2/json/nodes',
@@ -23,3 +23,8 @@ class Nodes:
     @property
     def lxc(self):
         return Lxc(connect=self.session)
+
+    @property
+    def storage(self):
+        return Storage(connect=self.session)
+

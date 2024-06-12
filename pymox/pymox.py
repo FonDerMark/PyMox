@@ -78,3 +78,6 @@ class PyMox:
     @property
     def nodes(self):
         return Nodes(session=self)
+
+    def storage(self):
+        return Storage(session=self)
