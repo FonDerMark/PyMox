@@ -1,3 +1,4 @@
-from pymox.connection import CreateConnection
+from .pymox import PyMox
+from .nodes import Nodes
 
-__all__ = ['CreateConnection']
+__all__ = ['PyMox', 'Nodes']
